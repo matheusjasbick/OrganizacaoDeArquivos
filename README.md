@@ -1,10 +1,28 @@
-# Trabalho - Estrutura de Arquivos
+# Estruturas de Arquivos em C
 
 Nesse trabalho eu implementei algumas operações com arquivos binários em C, focando em busca, uso de índice e ordenação.
 
-O trabalho foi dividido em três partes:
+## Estrutura dos dados
+
+O arquivo utiliza uma estrutura fixa de 300 bytes para cada registro:
+
+```c
+typedef struct {
+    char logradouro[72];
+    char bairro[72];
+    char cidade[72];
+    char uf[72];
+    char sigla[2];
+    char cep[8];
+    char lixo[2];
+} Endereco;
+```
+
+Isso permite acessar diretamente qualquer registro no arquivo usando a posição.
 
 ---
+
+O trabalho foi dividido em três partes:
 
 ## 1. Busca binária
 
